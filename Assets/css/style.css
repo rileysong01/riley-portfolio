@@ -1,0 +1,66 @@
+:root{
+    --kuromi: #F2DFF9;
+    --pompompurin:#FFF6D7;
+}
+
+body {
+    font-family: Futura, sans-serif;
+    line-height: 1.3;
+}
+
+/* header + nav bar */
+header {
+    background-color: var(--kuromi);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    font-size: 25px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    font-size: 15px;
+}
+
+header a {
+    color:black;
+    text-decoration: none;
+}
+
+/*main body*/
+
+#aboutme {
+    /* how to move to the right side in between h2 and paragraph?*/
+    border-left: 5px solid var(--pompompurin);
+    
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+
+}
+
+#aboutme h2 {
+    margin-left: 70px;
+}
+
+#aboutme img {
+    max-width:250px;
+    height:auto;
+}
+
+#aboutme p{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+}
