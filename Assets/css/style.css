@@ -27,7 +27,7 @@ header ul {
     margin: 1%;
 }
 
-header a {
+a {
     color: black;
     text-decoration: none;
 }
@@ -54,7 +54,7 @@ section {
 
 /*img aspect ratio changes when screen size shrinks??*/
 #aboutme img {
-    max-width: 250px;
+    width: 250px;
     height: auto;
     margin-left: 10px;
 }
@@ -77,15 +77,17 @@ section {
     align-items: center;
 }
 
-/*project cards*/
+/*primary project cards*/
 
-#projectcards {
+#primaryproject {
     border-left: 5px solid var(--pompompurin);
+    /*a way to automatically align the two left border?*/
     margin-left: 153px;
     position: relative;
 }
 
 #project1 {
+    position:relative;
     display: flex;
     margin-left: 2%;
     margin-bottom: 2%;
@@ -101,6 +103,49 @@ section {
     left: 0;
     padding: 2%;
     background-color: rgba(100, 100, 100, 0.2)
+}
+
+/*secodary project cards*/
+
+/* #secondaryprojects {
+    border-left: 5px solid var(--pompompurin);
+    margin-left: 153px;
+    position: relative;
+    
+}
+
+#project2 {
+    position:relative;
+    display: flex;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    background-image: url("https://placehold.co/600x400");
+    height: 200px;
+    width: 750px;
+} */
+
+/* contact me*/
+#contactme {
+    background-color: var(--kuromi);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2%;
+    margin:0;
+    /*why arent they spaced out?*/
+    justify-content: space-between;
+    
+}
+
+#contactme ul {
+    display: flex;
+    font-size: 15px;
+    margin: 3%;
+    justify-content: space-between;
+}
+
+#contactme ul li {
 }
 
 @media screen and (max-width: 768px) {
