@@ -6,135 +6,159 @@
 body {
     font-family: Futura, sans-serif;
     line-height: 1.3;
+    min-width: 350px;
 }
 
-/* header + nav bar */
-header {
-    background-color: var(--kuromi);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2%;
-    font-size: 25px;
-}
-
-header ul {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-    font-size: 15px;
-    margin: 1%;
-}
-
+/*sets all anchor elements aesthetics*/
 a {
     color: black;
     text-decoration: none;
 }
 
-section {
-    margin: 2%;
+/*header + nav */
+header{
+    background-color: var(--kuromi);
     display: flex;
     flex: wrap;
-    flex-direction: column;
-
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 2%;
 }
 
-/*About Me section*/
-#aboutme h2 {
-    margin-left: 80px;
-    margin-bottom: 10px;
-    display: flex;
-}
-
-#aboutmebody {
-    display: flex;
-
-}
-
-/*img aspect ratio changes when screen size shrinks??*/
-#aboutme img {
-    width: 250px;
-    height: auto;
-    margin-left: 10px;
-}
-
-#aboutme p {
-    margin-left: 2%;
-    padding-left: 2%;
-    border-left: 5px solid var(--pompompurin);
-}
-
-
-#work {
+ header ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    font-size: 15px;
+    margin: 1%;
+} 
+
+
+.subtitle-column{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    float: left;
+    flex: 0 0 400px;
+    border-right: 5px solid var(--pompompurin);
 }
 
-#work h2 {
-    margin-left: 80px;
+/*about me*/
+
+#aboutme {
+    margin-top: 20px;
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-/*primary project cards*/
+img {
+    width: 250px;
+    height: auto;
+    /* position: relative; */
+} 
 
+#aboutme p {
+    margin: 2%;
+}
+
+/*primary work???*/
 #primaryproject {
-    border-left: 5px solid var(--pompompurin);
-    /*a way to automatically align the two left border?*/
-    margin-left: 153px;
-    position: relative;
-}
-
-#project1 {
-    position:relative;
+    margin-top: 2.5%;
     display: flex;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    padding-left: 2%;
-    background-image: url("https://placehold.co/600x400");
-    height: 200px;
-    width: 750px;
+    flex-direction: row;
+    align-items: center;
+
 }
 
-#work h3 {
+#worktitle {
+    height: 240px;
+    border-right: 5px solid var(--pompompurin);
+}
+
+#worktitle h2 {
+    margin-top: 80px;
+}
+
+
+#project1{
+    background-image: url("../images/kuromi1.webp");
+    height: 200px;
+    /*flex??*/
+    width: 700px;
+    margin: 25px;
+    display: flex;
+}
+
+h3 {
     position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 2%;
-    background-color: rgba(100, 100, 100, 0.2)
+    background-color: rgba(100, 100, 100, 0.2);
+
+    /* why is it not aligning to the bottom left of parent?*/
+    /* left: 0;
+        bottom 0; */
 }
 
-/*secodary project cards*/
-
-/* #secondaryprojects {
-    border-left: 5px solid var(--pompompurin);
-    margin-left: 153px;
-    position: relative;
-    
-}
-
-#project2 {
-    position:relative;
+/*secondary projects*/
+#secondaryprojects {
     display: flex;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    padding-left: 2%;
-    background-image: url("https://placehold.co/600x400");
+    flex: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+#secondaryprojectcontainer {
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+}
+
+#secondarytitle {
+    height: 1000px;
+    border-right: 5px solid var(--pompompurin);
+}
+
+#secondarytitle h2 {
+    display: none;
+}
+
+.secondaryprojectcards{
     height: 200px;
-    width: 750px;
-} */
+    /*flex??*/
+    width: 700px;
+    margin: 25px;
+    display: flex;
+    margin: 25px;
+}
+
+/*change secondary project photo*/
+#project2 {
+    background-image: url(../images/my-melody.webp);
+}
+
+#project3 {
+    background-image: url(../images/my-melody.webp);
+}
+
+#project4 {
+    background-image: url(../images/my-melody.webp);
+}
+
+#project5 {
+    background-image: url(../images/my-melody.webp);
+}
+
 
 /* contact me*/
 #contactme {
     background-color: var(--kuromi);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     padding: 2%;
     margin:0;
     /*why arent they spaced out?*/
-    justify-content: space-between;
     
 }
 
@@ -142,15 +166,17 @@ section {
     display: flex;
     font-size: 15px;
     margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-#contactme ul li {
-}
-
-@media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
     }
-
-}
+    .secondaryprojectcards {
+        flex: 1 0 50%;
+    }     
+ }
