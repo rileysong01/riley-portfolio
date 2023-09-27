@@ -97,6 +97,12 @@ img {
     flex: 1 0 auto;
 }
 
+
+#project2 {
+    background-image: url("../images/tcgcardtactics.png");
+
+}
+
 h3 {
     position: absolute;
     padding: 2%;
